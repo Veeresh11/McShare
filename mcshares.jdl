@@ -1,0 +1,44 @@
+entity Customer{
+	id String,
+    name String,
+    phone String
+}
+
+entity Individual{
+	id String,
+	dob Instant
+}
+
+entity Corporate{
+	id String,
+	dateIncorp Instant,
+	regNo String
+}
+
+entity Address{
+	id Long,
+    adress1 String,
+    address2 String,
+    town String,
+    country String
+}
+
+entity Shares{
+	id Long,
+    numShares Long,
+    sharePrice Double
+}
+
+relationship OneToOne {
+	Customer{address} to Address
+}
+
+relationship OneToOne {
+	Customer{share} to Shares
+}
+
+paginate Customer with pagination
+
+// Set service options to all except few
+service all with serviceImpl
+
