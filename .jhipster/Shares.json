@@ -1,0 +1,28 @@
+{
+  "name": "Shares",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "numShares",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "sharePrice",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "shares",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210619193806"
+}

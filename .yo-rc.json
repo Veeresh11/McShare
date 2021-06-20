@@ -41,6 +41,8 @@
     "jwtSecretKey": "MDYyYjY0NmYyYmU4NWIxM2I3MjFhYTEzY2UzYmVjMWQwZGRhMDdjZjJkODkyODE4ODNkODdhOTQxMjA2ZmZhYWU1M2U5YmNiNmMyN2MxMmUwNTY0OTgzNjk0ZmJhZTY1ZjUzZmE4NTRjYjQ5M2Y5NWU2NTVhZDI5ZjZiYTFkZTg=",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["en", "fr"]
+    "languages": ["en", "fr"],
+    "entities": ["Customer", "Individual", "Corporate", "Address", "Shares"],
+    "lastLiquibaseTimestamp": 1624131486000
   }
 }
