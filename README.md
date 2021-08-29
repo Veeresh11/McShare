@@ -1,6 +1,10 @@
-# BackendMcShare
+# Backend - McShare
 
-This application was generated using JHipster 7.0.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v7.0.0](https://www.jhipster.tech/documentation-archive/v7.0.0).
+This application was generated using JHipster 7.0.0 and then modified.
+
+This Application can be run with the ./mvnw command on windows if you have all the dependencies (maven, node js, Java, etc) installed.
+
+More details can be found below:
 
 ## Development
 
