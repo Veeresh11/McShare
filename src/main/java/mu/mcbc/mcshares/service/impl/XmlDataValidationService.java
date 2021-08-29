@@ -61,15 +61,37 @@ public class XmlDataValidationService {
         Validator validator = factory.getValidator();
 
         for (Individual ind : lstInd) {
-            Set<ConstraintViolation<Shares>> violations = validator.validate(ind.getShare());
+            Set<ConstraintViolation<Shares>> sharesViolations = validator.validate(ind.getShare());
+            Set<ConstraintViolation<Individual>> individualViolations = validator.validate(ind);
 
-            if (violations.size() == 0) {
+            if (sharesViolations.size() == 0 && individualViolations.size() == 0) {
                 lstNewInd.add(ind);
             }
 
-            for (ConstraintViolation<Shares> violation : violations) {
-                System.out.println("Logging Corporate error");
-                log.error("Corporate shares validation error: " + violation.getMessage() + " Data:  " + violation.getRootBean().toString());
+            for (ConstraintViolation<Shares> violation : sharesViolations) {
+                System.out.println("Logging Individual Shares error");
+                log.error(
+                    "Individual shares validation error: " + violation.getMessage() + " Data:  " + violation.getRootBean().toString()
+                );
+
+                errorLogService.save(
+                    new ErrorLog(
+                        "Individual shares validation error: " + violation.getMessage() + " Data:  " + violation.getRootBean().toString(),
+                        Instant.now()
+                    )
+                );
+            }
+
+            for (ConstraintViolation<Individual> violation : individualViolations) {
+                System.out.println("Logging Individual error");
+                log.error("Individual validation error: " + violation.getMessage() + " Data:  " + violation.getRootBean().toString());
+
+                errorLogService.save(
+                    new ErrorLog(
+                        "Individual validation error: " + violation.getMessage() + " Data:  " + violation.getRootBean().toString(),
+                        Instant.now()
+                    )
+                );
             }
         }
 

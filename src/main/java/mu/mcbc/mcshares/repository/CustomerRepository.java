@@ -2,6 +2,7 @@ package mu.mcbc.mcshares.repository;
 
 import mu.mcbc.mcshares.domain.Customer;
 import org.springframework.data.jpa.repository.*;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 /**

@@ -22,7 +22,6 @@ public class Corporate extends Customer implements Serializable {
     private String regNo;
 
     public Corporate() {
-        // TODO Auto-generated constructor stub
         this.custType = CustomerType.CORPORATE;
     }
 
@@ -31,7 +30,6 @@ public class Corporate extends Customer implements Serializable {
         this.dateIncorp = dateIncorp;
         this.regNo = regNo;
         this.custType = CustomerType.CORPORATE;
-        // TODO Auto-generated constructor stub
     }
 
     public Instant getDateIncorp() {

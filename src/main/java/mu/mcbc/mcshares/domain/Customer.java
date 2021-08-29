@@ -15,9 +15,9 @@ import org.hibernate.search.annotations.TermVector;
  * A Customer.
  */
 @Entity
+@Indexed
 @Table(name = "customer")
 @Inheritance(strategy = InheritanceType.JOINED)
-@Indexed
 public class Customer implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -26,7 +26,7 @@ public class Customer implements Serializable {
     protected String id;
 
     @Column(name = "name")
-    @Field(termVector = TermVector.YES)
+    @Field
     private String name;
 
     @Column(name = "phone")

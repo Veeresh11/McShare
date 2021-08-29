@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.Instant;
 import javax.persistence.*;
 import mu.mcbc.mcshares.enums.CustomerType;
+import mu.mcbc.mcshares.validator.AtLeast18;
 
 /**
  * A Individual.
@@ -15,6 +16,7 @@ public class Individual extends Customer implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @AtLeast18
     @Column(name = "dob")
     private Instant dob;
 
@@ -27,7 +29,6 @@ public class Individual extends Customer implements Serializable {
         super(id, name, phone);
         this.dob = dob;
         this.custType = CustomerType.INDIVIDUAL;
-        // TODO Auto-generated constructor stub
     }
 
     public Instant getDob() {
