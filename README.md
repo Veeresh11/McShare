@@ -1,6 +1,6 @@
 # Backend - McShare
 
-This application was generated using JHipster 7.0.0 and then modified.
+This application was generated using JHipster 7.0.0 and then modified for the McShare Backend test.
 
 This Application can be run with the ./mvnw command on windows if you have all the dependencies (maven, node js, Java, etc) installed.
 
